@@ -22,6 +22,14 @@
         <param name="android-package" value="com.example.plugin.Hello"/>
       </feature>
     </config-file>
+	
+	<config-file target="AndroidManifest.xml" parent="/manifest">
+		<uses-permission android:name="android.permission.INTERNET" />
+	</config-file>
+	
+	<config-file target="AndroidManifest.xml" parent="/manifest/application">
+        <activity android:name="com.facebook.FacebookActivity" android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:label="@string/app_name" />
+    </config-file>
 
     <source-file src="src/android/Hello.java" target-dir="src/com/example/plugin/"/>
 	<source-file src="src/android/libs/facebook.jar" target-dir="libs"/>
