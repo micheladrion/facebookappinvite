@@ -8,6 +8,8 @@ import com.facebook.FacebookSdk;
 import com.facebook.share.model.AppInviteContent;
 import com.facebook.share.widget.AppInviteDialog;
 
+import android.content.Context;
+
 public class Hello extends CordovaPlugin {
 
     @Override
