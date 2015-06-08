@@ -4,12 +4,21 @@ import org.apache.cordova.*;
 import org.json.JSONArray;
 import org.json.JSONException;
 
+import com.facebook.FacebookSdk;
+import com.facebook.share.model.AppInviteContent;
+import com.facebook.share.widget.AppInviteDialog;
+
 public class Hello extends CordovaPlugin {
 
     @Override
     public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException {
 
         if (action.equals("greet")) {
+			
+			Context context=this.cordova.getActivity().getApplicationContext();
+        	
+        	FacebookSdk.setApplicationId("732960346813030");
+            FacebookSdk.sdkInitialize(context);
 
             String name = data.getString(0);
             String message = "Hello, " + name;
