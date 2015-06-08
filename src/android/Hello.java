@@ -21,6 +21,22 @@ public class Hello extends CordovaPlugin {
         	
         	FacebookSdk.setApplicationId("732960346813030");
             FacebookSdk.sdkInitialize(context);
+			
+			String appLinkUrl, previewImageUrl;
+
+			appLinkUrl = "https://www.mydomain.com/myapplink";
+			previewImageUrl = "https://www.mydomain.com/my_invite_image.jpg";
+
+			if (AppInviteDialog.canShow()) {
+				
+				AppInviteContent content = new AppInviteContent.Builder()
+                .setApplinkUrl(appLinkUrl)
+                .setPreviewImageUrl(previewImageUrl)
+                .build();
+				
+			    AppInviteDialog.show( this.cordova.getActivity(), content);
+			    //AppInviteDialog.show( this.cordova.getActivity(), content );
+			}
 
             String name = data.getString(0);
             String message = "Hello, " + name;
