@@ -21,9 +21,9 @@
       <feature name="Hello">
         <param name="android-package" value="com.example.plugin.Hello"/>
       </feature>
-	  <preference name="org.eclipse.jdt.core.compiler.codegen.targetPlatform" value="1.6" />
-	  <preference name="org.eclipse.jdt.core.compiler.compliance" value="1.6" />
-	  <preference name="org.eclipse.jdt.core.compiler.source" value="1.6" />
+	  <preference name="org.eclipse.jdt.core.compiler.codegen.targetPlatform" value="1.7" />
+	  <preference name="org.eclipse.jdt.core.compiler.compliance" value="1.7" />
+	  <preference name="org.eclipse.jdt.core.compiler.source" value="1.7" />
     </config-file>
 	
 	<config-file target="AndroidManifest.xml" parent="/manifest">
