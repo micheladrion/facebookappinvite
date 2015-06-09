@@ -34,7 +34,8 @@
     <source-file src="src/android/Hello.java" target-dir="src/com/example/plugin/"/>
 	<!--<source-file src="src/android/libs/facebook.jar" target-dir="libs"/>-->
 	<framework src="src/android/libs/facebook" custom="true" />
-	<framework src="build-extras.gradle" custom="true" type="gradleReference" />
+	<!--<framework src="build-extras.gradle" custom="true" type="gradleReference" />-->
+	<resource-file src="plugin-build.gradle" target="cordova/lib/plugin-build.gradle" />
 	<source-file src="src/android/libs/android-support-v4.jar" target-dir="libs"/>
   </platform>
 
