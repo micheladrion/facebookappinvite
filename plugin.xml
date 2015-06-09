@@ -21,9 +21,6 @@
       <feature name="Hello">
         <param name="android-package" value="com.example.plugin.Hello"/>
       </feature>
-	  <preference name="org.eclipse.jdt.core.compiler.codegen.targetPlatform" value="1.7" />
-	  <preference name="org.eclipse.jdt.core.compiler.compliance" value="1.7" />
-	  <preference name="org.eclipse.jdt.core.compiler.source" value="1.7" />
     </config-file>
 	
 	<config-file target="AndroidManifest.xml" parent="/manifest">
@@ -37,6 +34,7 @@
     <source-file src="src/android/Hello.java" target-dir="src/com/example/plugin/"/>
 	<!--<source-file src="src/android/libs/facebook.jar" target-dir="libs"/>-->
 	<framework src="src/android/libs/facebook" custom="true" />
+	<framework src="facebookappinvite.gradle" custom="true" type="gradleReference" />
 	<source-file src="src/android/libs/android-support-v4.jar" target-dir="libs"/>
   </platform>
 
